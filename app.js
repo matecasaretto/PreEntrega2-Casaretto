@@ -32,7 +32,6 @@ if(respuesta == "si"){
 while(respuesta != "no"){
     let producto = prompt("Agrega el producto que mas te guste")
     let precio = 0
-
     if(producto == "mouse" || producto == "teclado" || producto == "auriculares" || producto == "monitor"){
         switch (producto) {
             case "mouse":
@@ -64,11 +63,11 @@ while(respuesta != "no"){
 respuesta = prompt("¿Deseas seguir comprando? (responde 'si' o 'no')");
 if (respuesta === "no") {
   if (carrito.length > 0) {
-    alert("Contenido actual del carrito:");
+    alert("Contenido actual del carrito:"); //Hacemos un foreach para mostarle al usuario el contenido del carrito
     carrito.forEach((item, index) => {
-      alert(`${index + 1}. ${item.producto} - Cantidad: ${item.cantidad} - Precio unitario: ${item.precio}$`);
+      alert(`${index + 1}. ${item.producto} - Cantidad: ${item.cantidad} - Precio: ${item.precio}$`);
     });
-
+    //Le pregutamos al usuario si quiere quitar algun producto
     let quitarProducto = prompt("¿Deseas quitar algún producto del carrito? (responde 'si' o 'no')");
 
     while (quitarProducto === "si") {
